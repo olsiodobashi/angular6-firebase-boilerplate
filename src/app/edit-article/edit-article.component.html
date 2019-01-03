@@ -1,0 +1,10 @@
+<div class="container bg-white mt-5 py-5" *ngIf="article">
+    <h1 class="text-center">
+        Edit <i>{{ article.Title }}</i>
+    </h1>
+    <div class="row justify-content-center">
+        <div class="col col-md-10">
+            <app-article-form [type]="'edit'" [article]="article" [articleId]="articleId"></app-article-form>
+        </div>
+    </div>
+</div>

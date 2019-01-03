@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row align-items-center my-4">
+        <div class="col-2"></div>
+        <div class="col-8 ml-auto text-center text-white">
+            <h1>
+                Angular 6 &amp; Firebase CRUD Boilerplate
+            </h1>
+            <h6 *ngIf="items">
+                {{ items.length }} articles
+            </h6>
+        </div>
+        <div class="col">
+            <ul class="nav actions justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/new-article" fa-border> <ion-icon name="add"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card-columns">
+        <div class="card mb-3" *ngFor="let item of items">
+            <img class="card-img-top" src="{{ item.Cover }}" alt="{{ item.Title }}" />
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ item.Title }}
+                </h5>
+                <span class="badge badge-success">
+                    {{ item.Category }}
+                </span>
+            </div>
+            <div class="card-footer">
+                <button mat-raised-button class="w-100" color="primary" type="button"
+                    (click)="viewDetails(item)">
+                    <ion-icon name="create"></ion-icon>
+                    Edit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

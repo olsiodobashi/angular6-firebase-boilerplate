@@ -1,0 +1,19 @@
+.create-form {
+    padding: 20px;
+
+    .submit-button-container {
+        justify-content: flex-end;
+
+        .submit-button {
+            width: 100%;
+        }
+    }
+
+    .input-style {
+        width: 100%;
+    }
+
+    .mat-error {
+        font-size: 12px;
+    }
+}
